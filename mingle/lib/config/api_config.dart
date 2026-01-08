@@ -2,7 +2,7 @@
 /// Store all API endpoints and base URLs here
 class ApiConfig {
   // Base URL for your API
-  static const String baseUrl = 'https://fintechsummit2026.onrender.com';
+  static const String baseUrl = 'https://fintechsummit2026-rqxl.onrender.com';
 
   // Auth endpoints
   static const String loginEndpoint = '/user/login';
