@@ -8,7 +8,8 @@ import 'package:mingle/screens/login/register.dart';
 import 'package:mingle/screens/login/register.dart';
 import 'package:mingle/styles/login-register-bg.dart';
 import 'package:mingle/styles/widget-styles.dart';
-import 'package:mingle/widgets/NavBar.dart';
+import 'package:mingle/widgets/NavBar-restaurant.dart';
+import 'package:mingle/widgets/NavBar-user.dart';
 import '../../../components/mingle-button.dart';
 import '../../../styles/colors.dart';
 import 'package:mingle/components/dialogs.dart' show showErrorAlertDialog;
@@ -87,7 +88,7 @@ class _LoginState extends State<Login> {
                         key: Key('goToMainPage'),
                         text: "Login",
                         onPressed: () async {
-                          Get.to(NavBar());
+                          Get.to(NavBarUser());
                           // final loader = LoadingOverlay();
                           // loader.show(context);
                           // try {
