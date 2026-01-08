@@ -27,23 +27,22 @@ def login(email, password):
 
 @router.post("/register")
 async def registerRequest(request: Request):
-    email, name, photo, description, dateIDs, matches, password, error = await read_json(request, 
+    email, name, photo, description, dateIDs, password, error = await read_json(request, 
         [
-        "email", "name", "photo", "description", "dateIDs", "matches", "password", 
+        "email", "name", "photo", "description", "dateIDs", "password", 
         ]
         )
     if error:
         return format_error_msg(error)
-    res = register(email, name, photo, description, dateIDs, matches, password)
+    res = register(email, name, photo, description, dateIDs, password)
     return res
 
-def register(email, name, photo, description, dateIDs, matches, password):
+def register(email, name, photo, description, dateIDs, password):
     usr_jsn =  {"email": email,
                 "name": name,
                 "photo": photo,
                 "description": description,
                 "dateIDs": dateIDs,
-                "matches": matches,
                 "password": password,
                 }
     
